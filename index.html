@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>web</title>
+    <link rel="stylesheet" type="text/css" href="css/pagedjs-interface.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <style>
+    @font-face {
+   font-family: fz;
+   src: url(./font/FZFuGCHJW.TTF);
+   
+   font-family:  song;
+   src: url(./font/仿宋_GB2312.ttf);
+   font-family: alf;
+   src: url(./font/Alfphabet-I.woff);
+   font-family: bar;
+   src: url(./font/Barlaxent.otf);
+ 
+   }  
+    
+   *{
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+ }
+ 
+   /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/  /*布局*/
+   .box{ width:559.36px ;height:793.69px; padding-right:20px;
+         
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(4, 1fr);
+         grid-gap:10px;
+         grid-template-areas: 
+         "a1 a1 "
+         "a2 a2 "
+         "a3 a3 "
+         "a4 a4 ";
+        /* justify-items:baseline;
+         align-items:start;*/
+     }
+    
+ 
+   .box div{border:1px black solid;position: absolute;}
+   .box div:nth-child(1){grid-area:a1;align-items:right;justify-items:center;font-family:fz;font-size:30px;background-color: white;margin-top:30px;box-shadow:5px 5px rgb(153,153,153);}
+   .box div:nth-child(2){grid-area:a2;background-color:yellow;font-family:'Times New Roman', Times, serif;
+     animation: 2s move;
+     animation-iteration-count: infinite ;animation-timing-function: ease-in-out;box-shadow:5px 5px rgb(153, 153, 153);
+    }
+  
+   #Verbalism{width:fit-content;height:fit-content;position: relative;top:200px;left:30px;background-color:white;animation: 2s move2;
+     animation-iteration-count: infinite ;animation-timing-function: ease-in-out;box-shadow:5px 5px rgb(153, 153, 153); }
+   #color{width:auto;height:90px;position: relative;right:100px;top:60px;font-size:60px;text-align: center;background-color:white;
+     box-shadow:5px 5px rgb(153, 153, 153);font-weight: 600;
+   }
+   #slang{ background-color:yellow;margin-top:10px;color:rgb(255, 65, 65);font-family:alf;letter-spacing:5px;font-size:20px;
+     font-weight: 600;
+     animation: 2s move3;box-shadow:5px 5px rgb(153, 153, 153);
+     animation-iteration-count: infinite ;animation-timing-function: ease-in-out;}
+   #guide{background-color:rgb(51, 80, 247);font-size: 120px;text-align:center;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;letter-spacing: 10px;
+     position: relative;top:500px;left:120px;box-shadow:5px 5px rgb(153, 153, 153);font-weight: 500;color:yellow;
+     animation: 2s move4;
+     animation-iteration-count: infinite ;animation-timing-function: ease-in-out;
+   }
+   #name{width:600px;height:25px;position: relative;top:700px;left:120px;
+     font-family:Arial, Helvetica, sans-serif;font-size: 18px;
+     border:1px rgb(255, 65, 65) solid;background-color: transparent;color:rgb(255, 65, 65);
+    
+     animation: 2s move5;
+     animation-iteration-count: infinite; animation-timing-function: ease-in-out;}
+   #dot1{width:10px;height:10px;position: relative;top:400px;left:120px;background-color:transparent;
+     border:black 1px solid;
+     animation: 2s move8;animation-iteration-count: infinite ;animation-timing-function: ease-in-out;}
+   #dot2{width:10px;height:10px;position: relative;top:200px;left:30px;background-color:transparent;border:black 1px solid;
+     animation: 2s move6;animation-iteration-count: infinite ;animation-timing-function: ease-in-out;
+   }
+   #dot3{width:10px;height:10px;position: relative;right:100px;top:150px;background-color:transparent;border:black 1px solid;
+     animation: 2s move7;animation-iteration-count: infinite ;animation-timing-function: ease-in-out;
+   }
+   
+   
+   @keyframes move{
+   0%{transform:translate(0,0);} 
+   50%{transform:translate(-200px,0);}
+   100%{transform:translate(0,0);} 
+   }
+   
+   @keyframes move2{
+     0%{transform:translate(0,0);}
+     50%{transform:translate(200px,0);}
+     100%{transform:translate(0,0);}
+   } 
+ 
+   @keyframes move3{
+     0%{transform:translate(0,0);}
+   50%{transform:translate(100px,0);}
+   100%{transform:translate(0,0);}
+   } 
+ 
+ 
+   @keyframes move4{
+     0%{transform:translate(0,0);}
+     50%{transform:translate(-80px,-20px);}
+     100%{transform:translate(0px,0);}
+ 
+   } 
+ 
+   @keyframes move5{
+     0%{transform:translate(0,0);}
+     50%{transform:translate(-120px,0);}
+     100%{transform:translate(0,0);}
+ 
+   } 
+ 
+   @keyframes move6{
+     0%{transform:translate(0,0);}
+     50%{transform:translate(150px,0);}
+     100%{transform:translate(0,0);}
+ 
+   } 
+   @keyframes move7{
+     
+   0%{transform:translate(0,0);} 
+   50%{transform:translate(-150px,0);}
+   100%{transform:translate(0,0);} 
+ 
+   } 
+ 
+   @keyframes move8{
+     0%{transform:translate(0,0);}
+     50%{transform:translate(-60px,-10px);}
+     100%{transform:translate(0px,0);}
+ 
+   } 
+   /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/
+    /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/
+   
+ 
+ .content {
+     position: relative;
+     top: 500px;
+     left: 50%;
+    
+     transform: translate(-50%, -50%);
+     height: 160px;
+     overflow: hidden;
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size: 35px;
+     line-height: 40px;
+     color: white;
+ 
+ }
+ 
+  
+ 
+ .content_container:before, .content_container:after {
+     position: absolute;
+     top: 0;
+     color: white;
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size: 42px;
+     line-height: 40px;
+     -webkit-animation-name: opacity;
+             animation-name: opacity;
+     -webkit-animation-duration: 2s;
+             animation-duration: 2s;
+     -webkit-animation-iteration-count: infinite;
+             animation-iteration-count: infinite;
+ }
+ 
+ .content_container_text {
+     display: inline;
+     float: left;
+     margin: 0;
+ }
+ 
+ .content_container_list {
+   
+     margin-top: 0;
+     padding-left: 110px;
+     text-align: left;
+     list-style: none;
+     -webkit-animation-name: change;
+             animation-name: change;
+     -webkit-animation-duration: 10s;
+             animation-duration: 10s;
+     -webkit-animation-iteration-count: infinite;
+             animation-iteration-count: infinite;
+ }
+ 
+ .content_container_list_item {
+     line-height: 40px;
+     margin: 0;}
+ 
+ @-webkit-keyframes change {
+     0%, 12.66%, 100% {
+         transform: translate3d(0, 0, 0);
+     }
+ 
+     16.66%, 29.32% {
+         transform: translate3d(0, -25%, 0);
+     }
+ 
+     33.32%, 45.98% {
+         transform: translate3d(0, -50%, 0);
+     }
+ 
+     49.98%, 62.64% {
+         transform: translate3d(0, -75%, 0);
+     }
+ 
+     66.64%, 79.3% {
+         transform: translate3d(0, -50%, 0);
+     }
+ 
+     83.3%, 95.96% {
+         transform: translate3d(0, -25%, 0);
+     }
+ }
+ 
+ @keyframes change {
+     0%, 12.66%, 100% {
+         transform: translate3d(0, 0, 0);
+     }
+ 
+     16.66%, 29.32% {
+         transform: translate3d(0, -25%, 0);
+     }
+ 
+     33.32%, 45.98% {
+         transform: translate3d(0, -50%, 0);
+     }
+ 
+     49.98%, 62.64% {
+         transform: translate3d(0, -75%, 0);
+     }
+ 
+     66.64%, 79.3% {
+         transform: translate3d(0, -50%, 0);
+     }
+ 
+     83.3%, 95.96% {
+         transform: translate3d(0, -25%, 0);
+     }
+ }
+   /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/
+   /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/  /*表情*/
+ 
+ 
+   /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/
+ .box2{color:black;padding:5px 5px 10px 7px;text-align:left;}
+ h1{font-size:42px;font-family:Arial, Helvetica, sans-serif;padding:0 5px 0 7px;font-weight: 300;
+   -webkit-text-stroke: 1px black;color:white;font-style:italic;
+ }
+ h2{font-size:24px;padding:0 5px 10px 8px;font-family:Arial, Helvetica, sans-serif;font-weight: 300;
+   font-style: oblique;color:white;
+  
+ }
+ 
+ 
+ .conte1{font-family:Arial, Helvetica, sans-serif;font-size:14px;word-break: break-word;padding:80px 5px 10px 7px;font-weight: 300;
+ }
+ .conte2{font-family:Arial, Helvetica, sans-serif;font-size:14px;word-break: break-word;padding:5px 5px 10px 7px;font-weight: 300;
+ }
+ .conte3{font-size:14px;word-break: break-word;font-family:Arial, Helvetica, sans-serif;font-weight: 300;
+ padding:5px 5px 10px 7px;}
+ .conte4{font-size:14px;word-break: break-word;font-family:Arial, Helvetica, sans-serif;font-weight: 300;
+ padding:5px 5px 10px 7px;}
+ .conte5{font-size:14px;word-break: break-word;font-family:Arial, Helvetica, sans-serif;font-weight: 300;
+ padding:20px 0 10px 2px;}
+ .conte6{font-size:14px;word-break: break-word;font-family:Arial, Helvetica, sans-serif;font-weight: 300;
+ padding:120px 0 10px 2px;}
+ 
+  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/  /*第二段*/
+   
+ 
+ /*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*/
+ 
+ 
+ #chap3{
+   padding:0;
+   margin:0;
+ width:559.36px ;height:793.69px;
+ background: linear-gradient(-45deg, grey, white, blue);
+ background-size: 400% 400%;
+ animation: Gradient 15s ease infinite;}
+ @keyframes Gradient {
+     0% {background-position: 0 50%;}
+     50% {background-position: 100% 50%;}
+     100% {background-position: 0 50%;}
+ }  
+ .souxie{font-family:song;font-size:40px;padding-left: 9px;padding-top: 7px;
+   text-align: left;font-weight: 500;color:transparent;
+   -webkit-text-stroke: 1px black;
+ }
+ .souxie2{font-family:Arial, Helvetica, sans-serif;font-size:36px;padding-left:12px;color:white;
+ 
+   text-align: left;font-weight:400;font-style: italic;color:transparent;
+   -webkit-text-stroke: 1px black;}  
+ 
+ .b4{width:200px;height:100px;padding-left:10px;font-family:Arial, Helvetica, sans-serif;font-weight:300;
+ font-size:14px;padding-top:40px;text-align:left;color:black}
+
+ .b5 {width:300px;height:300px;position: relative;float: right;left:120px;top:480px;
+   color:transparent;
+   -webkit-text-stroke: 1px black;font-weight:400;
+ }
+ .b5 p{transform:rotate(90deg);font-size:24px;font-family:Arial, Helvetica, sans-serif;font-weight: 400;
+ }
+ 
+ 
+ 
+ 
+ /*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*//*第3段*/
+ 
+ 
+ 
+ #chap4{
+   padding:0;
+   margin:0;
+ width:559.36px ;height:793.69px;
+ background: linear-gradient(-45deg, grey, white, blue);
+ background-size: 400% 400%;
+ animation: Gradient 15s ease infinite;
+ 
+ 
+   column-count: 2;
+   column-gap:20px;}
+ 
+   @keyframes Gradient {
+     0% {background-position: 0 50%;}
+     50% {background-position: 100% 50%;}
+     100% {background-position: 0 50%;}
+ }  
+ 
+ .b1{font-family:Arial, Helvetica, sans-serif;font-size:24px;color:black;color:transparent;
+   -webkit-text-stroke: 1px black;
+   font-weight:500;padding-left:10px;}
+ 
+ 
+ 
+ /*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*//*第4段*/
+ /*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*/
+ 
+ #chap5{width:559.36px ;height:793.69px;
+ background-color: transparent;
+ background-image: url(./img/4.png);
+ 
+ background-size:contain;
+ background-repeat: no-repeat;
+ color:black;
+ justify-content: center;
+ align-items: center;
+ }
+ .photo{ position: relative;margin-left: 40px;padding-top: 50px;}
+ .slogan1{font-family:bar;font-size:60px;border:1px solid black;background-color: yellow;width:232px;height:80px;}
+ .slogan2{position: relative;margin-left: 50px;padding-top:10px;}
+ .slogan2 p{font-family:'Times New Roman', Times, serif;font-size:18px;border:1px solid black;background-color: yellow;width:100px;height:30px;text-align: center;}
+ .slogan3{position: relative;margin-left:450px;margin-top:-90px;}
+ .slogan3 p{font-family:bar;font-size:20px;border:1px solid black;background-color: yellow;width:90px;height:30px;text-align: center;font-weight: 700;}
+ /*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*//*第5段*/
+ /*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*/
+ 
+ #chap6{width:559.36px ;height:793.69px;
+   background-color:  transparent;
+ background-image: url(./img/1.png);
+ 
+ background-size:100% 431px;
+ background-repeat: no-repeat;
+ color:black;
+ justify-content: center;
+ align-items: center;
+ }
+ 
+ .slogan4{position: relative;margin-left: 150px;padding-top: 55px;}
+ .slogan4 p{ font-family:bar;font-size:28px;border:1px solid black;background-color: yellow;width:100px;height:40px;text-align: center;}
+ .slogan5{position: relative;margin-left: 200px;padding-top:120px;}
+ .slogan5 p{ font-family:bar;font-size:14px;border:1px solid black;background-color: yellow;width:80px;height:20px;text-align: center;}
+ .slogan6{position: relative;margin-left: 400px;padding-top:-90px;}
+ .slogan6 p{ font-family:bar;font-size:14px;border:1px solid black;background-color: yellow;width:80px;height:20px;text-align: center;}
+ 
+ 
+ 
+ 
+ /*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*//*第6段*/
+ /*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*/
+ #chap7{background-color: transparent;}
+ .nsdd{font-family:bar;font-size:40px;color:black;text-align: center;}
+ #nsdd2{font-family:bar;font-size:30px;color:black;text-align: center;}
+ /*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*//*第7段*/
+ /*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*/
+ 
+ #chap8{width:559.36px ;height:793.69px; justify-content: center;
+      align-items: center;
+ }
+ .number1{font-size:500px;font-family: bar;color:black;letter-spacing:4px;text-align:left;filter: blur(5px);animation:blur 5s infinite;}
+ @keyframes blur {
+   0%{filter:blur(0px);}
+  50%{filter:blur(10px);}
+   100%{filter:blur(0px);}
+ }
+ /*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*//*第8段*/
+ #chap9{columns:2;column-gap: 18px;font-size:20px;color:black;font-family:bar;}
+ .un{list-style:none;position:relative;padding-left:25px;line-height:40px;}
+ 
+ 
+ 
+ /*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*//*html*/
+ 
+  </style>
+ 
+ 
+ 
+     <body>
+ 
+       <section id="chap1">
+       <div class="box">
+   
+         <div>中国网络流行语指南  
+          <div id="Verbalism">Verbalism</div>
+           </div>
+   
+         <div id="color">咬文嚼字</div>
+         <div id="slang">Chinese Internet Slang 2021</div>
+         <div id="guide">GUIDE</div>
+         <p id="name"> ©Yewen.Liu | instagram | liuyewenchine@gmail.com </p>
+             <div id="dot1"></div>
+             <div id="dot2"></div>
+             <div id="dot3"></div>
+             <div id="dot4"></div>
+      
+       </div>
+     </section>
+     <section id="chap1">
+       <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->
+       <div class="content">
+         
+           <ul class="content_container_list">
+             <li class="content_container_list_item">(yyds)</li>
+             <li class="content_container_list_item">(nsdd)</li>
+             <li class="content_container_list_item">(plgg)</li>
+             <li class="content_container_list_item">(3737)</li>
+             <li class="content_container_list_item">(awsl)</li>
+             <li class="content_container_list_item">(dssq)</li>
+             <li class="content_container_list_item">(5252)</li>
+             <li class="content_container_list_item">(u1s1)</li>
+           </ul>
+       
+       </div>
+       <div class="content">
+         
+         <ul class="content_container_list">
+           <li class="content_container_list_item">(●__●)</li>
+           <li class="content_container_list_item">.(☉_☉)</li>
+           <li class="content_container_list_item">(⊙０⊙)</li>
+           <li class="content_container_list_item">(≖‿ゝ≖)✧</li>
+           <li class="content_container_list_item"> ༼✷ɷ✷༽</li>
+           <li class="content_container_list_item"> ♫.(◕∠◕).♫</li>
+           <li class="content_container_list_item"> ≧ω≦</li>
+           <li class="content_container_list_item">இдஇ</li>
+         </ul>
+     
+     </div>
+   </section>
+         <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->  <!--表情页表情页-->
+   <!--第三页-->
+   <section id="chap2">
+   <div class="box2">
+    <h1><strong>摘要</strong></h1>
+    <h2>Abstract</h2>
+   
+   <div class="conte1">
+     <p>在过去的十年里,
+     中国互联网用户数量已经超过30万,互联网的繁荣带来了在聊天室,
+     微博和其他在线场所创造和传播的单词和固定表达方式数量的<br>激增。</p>
+     &nbsp;
+     <p>互联网在中国为此类表达方式的传播提供了独特的环境,其中许多表达方式具有政治敏感性,因为它仍然是一个相对未经审查的平台,用户可以即时向数百万人传递信息。
+   
+    这些消息经常传播标准普通话中找不到的俚语:然而,其中一些俚语已经被广泛接受,以至于它们已经被输入了官方的新华社词典。</p></div>
+   
+   <div class="conte2">为了帮助大家更好的感受与理解网络语言的构成方式和特点,本书收集了2021年中国网络流行语,并进行注解。</div>
+   <div class="conte3">Over the past decade,China has had more than 300,000 Internet users,
+     and the internet boom has led to a surge in the number of words and fixed expressions created 
+     and disseminated in chat rooms,microblogs and other online venues. </div>
+     <div class="conte4">The Internet provides a unique 
+     environment for the dissemination of such expressions in China,&nbsp;
+      <p class="conte5">many of which are politically sensitive 
+     because <br>it remains a relatively uncensored platform <br>where users can instantly deliver information to 
+     millions of people.</p></div> 
+     <div class="conte4">
+     <p>These messages often spread slang that is not found in standard Mandarin: however, 
+     some of it has been so widely accepted that they have been entered into the official Xinhua dictionary.
+     According to David Crystal, an English-Chinese economist," the Internet is an extremely diverse medium 
+     and a mirror that reflects many aspects of the nature of language."</p> 
+     &nbsp;
+     <p>In particular, the World Wide Web 
+     provides <br>a place for almost all styles of language, mostly written and partly spoken.</p>
+     &nbsp;
+     <p>In Wikipedia, 
+     the definition of network language is "network language, representing a certain Internet culture, 
+     it is widely used in a variety of Internet applications, it comes from a wide<br> range of sources, 
+     many from dialects and colloquialisms, foreign languages, acronyms, harmonics, misplanting,
+     and even to
+     Symbols merge to pictogram effects, and so on, and belong to a mixed language. "</p></div>
+     <div class="conte4">
+     <p>To help you better feel and understand the composition and characteristics of online language,
+     this book collects and annotates Chinese Internet buzzwords for 2021.Wishing you a pleasant reading!</p>
+     &nbsp;
+     <p><em>04/11/2021</em></p>
+   </div>
+   
+       
+     </div>
+   </div>
+   
+   </section>
+   
+   <!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页--><!--第4页-->
+   <section id="chap3">
+       <div class="souxie">读不懂的缩写</div>
+       <div class="souxie2">suō xiě</div>
+      <div class="b4">
+       <p>字体输入作为网络聊天最基本的形式,需要通过键盘或触屏将字符输送到对方的显示屏上,打字速度肯定难与思维同步,
+       也远非直接对话那样方便,故以简约高效的字母替代汉字就成为网民聊天首选,它的内涵的丰富程度已经超过正规文字表达模式。</p>
+       <p>如今,似乎一切词语都可以使用缩写,这也造成了一定的交流障碍,因此我们常常能在网上看到许多人的疑惑和愤怒:“这到底什么意思？”
+       “这种词也有必要用缩写吗?“</p>
+       </div>
+       <div class="b5">
+         <p>Pinyin Abbreviations</p>
+       </div>
+       </section>
+   
+   
+       <section id="chap4">
+       
+       <div class="b1">
+        <p>Font input is the most basic form of online chat. 
+         It is necessary to send characters to the other party's display screen through the keyboard or <br> touch screen.</p>
+         &nbsp;
+         <p>The typing speed is definitely difficult to synchronize with the thinking,
+         and it is far from as convenient as direct dialogue.</p>
+         &nbsp;
+         <p>Therefore,it is only necessary to replace Chinese characters with simple and efficient letters.
+         It has become the first choice of netizens for chat,
+         and its richness of connotation has exceeded the formal textual expression mode. Nowadaysit seems that all words can be abbreviated, which also creates a certain communication barrier.</p>
+          &nbsp;
+          <p>Therefore,we can often see the doubts and anger of many people on the Internet: "What does this mean?"</p>
+          &nbsp;
+          <p>"Is it necessary to use abbreviations for this kind of words ?"</p>
+          
+          
+        </div>
+      
+       
+       
+        
+    </section>
+      
+         
+    
+     <!--第5页--> <!--第5页--> <!--第5页--> <!--第5页--> <!--第5页--> <!--第5页--> <!--第5页--> <!--第5页-->
+   
+   
+   
+   
+   </section>
+   <!--tututututututuutuuuuuuuuuuuuuuuuuu1-->
+   <section id="chap5">
+   <div class="photo">
+     <p class="slogan1">"BDJW!"</p>
+   </div>
+   <div class="slogan2"><p>"不懂就问!"</p></div>
+   <div class="slogan3">
+     <p >......</p>
+   </div>
+   
+   </section>
+   <!--tututututututuutuuuuuuuuuuuuuuuuuu2-->
+   <section id="chap6">
+   <div class="slogan4"><p>"XSWL"</p></div>
+   <div class="slogan5"><p>"笑死我了"</p></div>
+   <div class="slogan6"><p>"hhhhhh"</p></div>
+   
+   </section>
+   
+   
+   
+   
+   
+   <section id="chap7">
+    
+     <div>
+   
+     <p class="nsdd">① ( ͡° ͜ʖ ͡°) " NSDD "</p> 
+      <p id="nsdd2">你说的都对	/&deg;</p>
+      <p id="nsdd2">You're right&nbsp;&#10004;<br>about everything...</p>
+      <p id="nsdd2">/ Vous avez raison sur tout / </p>
+     </div>
+   
+     <div>
+       <p class="nsdd">②<br>" XSWL "</p> 
+        <p id="nsdd2">笑死我了人(＾▽＾)<br>人(＾▽＾)ﾉ</p>
+        <p id="nsdd2">It's too funny&nbsp;!&nbsp;/</p>
+        <p id="nsdd2"> /// c’est trop drôle /// </p>
+       </div>
+       <div>
+         <p class="nsdd">" YYDS "③</p> 
+          <p id="nsdd2">永远的神</p>
+          <p id="nsdd2">He is always a god &nbsp;&#10014;</p>
+          <p id="nsdd2">means that no one can <br>reach the level or height(*〞艸〝) </p>
+          <p id="nsdd2">/ personne ne peut<br> acader le niveau ou la hauteur</p>
+          <p id="nsdd2">///</p>
+       </div>
+     <!--<div class="note1">
+       
+     <div class="note11"><p id="awsl">ZQSG</p></div>
+     <div class="note12"><p id="awsl2">真情实感&nbsp;/&nbsp;One's real feelings &#9825;</p></div>
+     <div class="note13"><p id="awsl">BDJW</p></div>
+     <div class="note14"><p id="awsl2">不懂就问&nbsp;/&nbsp;If you don't understand, please ask &#191;</p></div>
+     <div class="note13"><p id="awsl">WLSW</p></div>
+     <div class="note14"><p id="awsl2">外来生物&nbsp;/&nbsp;Alien creatures </p></div>-->
+     
+   
+   </section>
+   
+   <section id="chap7">
+     <p id="nsdd2">///</p>
+     <div>
+       <p class="nsdd">④</p>
+       <p class="nsdd">" YYSY "</p> 
+       <p id="nsdd2">↘有一说一</p>
+        <p id="nsdd2">Speak based on fact /</p>
+        <p id="nsdd2">Parler en fonction des faits //</p>
+     </div>
+     
+     <div>
+       <p class="nsdd">⑤" OJBK "</p>
+       <p id="nsdd2">语气增强的“OK” </p>
+       <P class="nsdd"> (○’ω’○) </P>
+       <p id="nsdd2">// OK of heightened tone //</p>
+       <p id="nsdd2">OK de ton accentué</p>
+       <p class="nsdd">⑥</p>
+     </div>
+   
+     <div>
+       <p class="nsdd">" ZQSG "(♥◠‿◠)/</p>
+       <p id="nsdd2">ლ(╹◡╹ლ )真情实感</p>
+       <p id="nsdd2">One's real feelings</p>
+       <p id="nsdd2">Les vrais sentiments<br>♥ de chacun ♥</p>
+       <p id="nsdd2">///</p>
+     </div>
+   
+   </section>
+   
+   
+   <section id="chap8">
+    
+     
+     <div class="number1">
+     79
+     </div> 
+   </section>
+   <section id="chap8">
+    <div class="number1">
+     98
+     </div> 
+   </section>
+   
+   
+   
+   <section id="chap9">
+    
+     <ul class="un">
+       <li>[0]</li>
+       <li>0:你</li>
+       <li>025:你爱我</li>
+       <li>0451:你是唯一</li>
+        <li>065:原谅我</li>
+        <li>0837:你别生气</li>
+        <li>098:你走吧</li>
+        <li>[1]</li>
+        <li>1314:一生一世</li>
+        <li>1324:今生来世</li>
+        <li>1372:一厢情愿</li>
+        <li>1711:一心一意</li>
+        <li>1414:意思意思</li>
+        <li>[2]</li>
+        <li>246:饿死了</li>
+        <li>230:爱上你</li>
+       
+        <li>2037:为你伤心</li>
+        <li>200:爱你哦
+         <li>20110:爱你一百一十年</li>
+         <li>20184:爱你一辈子    </li>
+         <li>2030999:爱你想你久久久    </li>
+         <li>2037:为你伤心    </li>
+          <li>20475:爱你是幸福    </li>
+         <li>20209:爱你到永久    </li>
+         <li>20263:爱你到来生    </li>
+         <li>220225:爱爱你爱爱我    </li>
+         <li>240:爱死你    </li>
+         <li>234:爱相随    </li>
+         <li>2406:爱死你啦    </li>
+      
+         <li>245437:爱是如此神奇    </li>
+         <li> 25184:爱我一辈子    </li>
+         <li>25273:爱我到今生    </li>
+         <li>25915:爱我久一点    </li>
+         <li>25965:爱我就留我</li>
+   
+         <li>[3]</li>
+         <li>302:想你哦</li>
+         <li>31707:LOVE（这个单词需<br>要把31707倒过来看）</li>
+         <li>3399:长长久久</li>
+         <li>356:上网啦</li>
+         <li>329958:神啊救救我吧</li>
+         <li>39:Thank you</li>
+         <li>3731:真心真意</li>
+         <li>360:想念你</li>
+         <li>[4]</li>
+         <li>4456:速速回来</li>
+         <li>456:是我啦</li>
+         <li>460:想念你</li>
+         <li>4950:只有为你</li>
+         <li>48:是吧</li>
+         <li>4466:顺顺利利</li>
+         <li>[5]</li>
+         <li>505:SOS</li>
+         <li>514:无意思</li>
+         <li>520:我爱你</li>
+         <li>511:我愿意</li>
+         <li>5376:我生气咯</li>
+         <li>546:我输了</li>
+         <li>555......:呜呜呜......（哭）</li>
+         <li>5776:我出去了</li>
+         <li>53:晚安</li>
+         <li>586:我不来</li>
+         <li>[6]</li>
+         <li>687:对不起</li>
+         <li> 6121:懒得理你</li>
+         <li> 6868:溜吧！溜吧！</li>
+         <li>[7]</li>
+         <li>729:去喝酒</li>
+         <li> 741:气死你</li>
+         <li>756:辛苦了</li>
+         <li>765:去跳舞</li>
+         <li>[8]</li>
+         <li>8116:不理你了</li>
+         <li> 8384:不三不四 </li>
+         <li> 8716:八格耶鲁--混蛋 </li>
+         <li> 886:拜拜罗</li>
+   
+      </ul>
+    
+     </section>
+ 
+   </body>
+   
+  <script type="text/javascript" src="js/paged.polyfill.js"></script>
+  <script type="text/javascript" src="js/color.js"></script>
+</html>

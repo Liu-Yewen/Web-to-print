@@ -1,0 +1,143 @@
+
+
+body{background-color: black;}
+
+@media print{
+@page{
+    marks: crop cross;
+    bleed: 3mm;
+    size:A5;}
+
+
+  
+
+
+
+@page:first{
+ background-color: whitesmoke;
+ size:A5;
+ margin:10px;
+}
+
+
+@page:nth(2n){
+    background-color:white;
+    size:A5;
+    bleed: 3mm;}
+
+#chap2{ page: modelA}
+
+@page modelA{
+background-color:white;
+justify-content: center;
+align-items: center;
+
+
+}
+
+@page modelA:right{ 
+    @top-left-corner{content:"(yyds)";text-align:center;background: yellow;}
+    @top-left{content:"";background: yellow;}
+    @top-center{content:"(bdjw)";background: yellow;}
+    @top-right {content:"";background: yellow;}
+    @right-top {content:"";background: yellow;}
+    @top-right-corner{content:"(nsdd)";text-align:center;background: yellow;}
+    @left-top {content:"";background: yellow;}
+    @bottom-left-corner{content:"(plgg)";text-align:center;background: yellow;}
+    @bottom-center{content:"(pljj)";background: yellow;}
+    @bottom-right-corner{content:"(zqsg)";text-align:center;background: yellow;}
+    @right-middle{content:counter(page);background: yellow; }
+    @right-bottom{content:"";background: yellow;}
+    margin-left: 20mm;
+    margin-right: 20mm;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+ 
+    color:black;
+    font-weight: 300;
+
+
+}
+
+@page modelA:left {
+    margin-left: 25mm;
+    margin-right: 25mm;
+    @top-left-corner{content:"(xswl)";text-align:center;background: yellow;}
+    @top-center{content:"(bdjw)";background: yellow;}
+    @left-top {content:"";background: yellow;}
+    @right-middle{content:counter(page);background: yellow;}
+    @right-top {content:"";background: yellow;}
+    @top-right-corner{content:"(nsdd)";text-align:center;background: yellow;}
+    @bottom-left-corner{content:"(yyds)";text-align:center;background: yellow;}
+    @bottom-center{content:"(bdjw)";background: yellow;}
+    @bottom-right-corner{content:"(nsdd)";text-align:center;background: yellow;}
+    @left-bottom{content:"";background: yellow;}
+    @right-bottom{content:"";background: yellow;}
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    font-weight: 300;
+
+    color:black;
+}
+
+
+
+#chap3{ page: modelB}
+
+
+@page modelB{
+margin:0;
+padding:0;
+justify-content: center;
+align-items: center;
+
+
+}
+
+
+#chap4{ page: modelC}
+@page modelC{
+    padding:0;
+    margin:0;}
+
+#chap5{ page: modelD}
+@page modelD{
+    padding:0;
+    margin:0;
+    justify-content: center;
+    align-items: center;}
+#chap6{ page: modelD}
+
+#chap7{page:modelD}
+ 
+#chap8{page:modelE}
+@page modelE{
+    size:A5;
+    padding:0;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    /*background-color: yellowgreen;*/}
+
+@page modelE:left{
+   margin:25px;
+   @bottom-center{content: "0" counter(page); font-style: oblique;}
+   @top-left{content:"Digital homophonic"; font-style: oblique;}
+
+   @bottom-left{content:"GUIDE"; font-style: oblique;}
+   font-size:15px;
+   font-family:Arial, Helvetica, sans-serif;
+   color:black;}
+
+@page modelE:right{
+    margin:25px;
+    @bottom-center{content: "0" counter(page); font-style: oblique;}
+    @top-left{content:"Digital homophonic"; font-style: oblique;}
+   
+    @bottom-left{content:"GUIDE"; font-style: oblique;}
+    font-size:15px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;}
+
+
+#chap9{page:modelD}
